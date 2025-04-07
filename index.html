@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+    <title>Strumming For Guitar Practice</title>
+    <style>
+        body {
+        min-height: 100vh;
+        margin:0;
+        padding:0;
+        text-align:center;
+        font-family: Helvetica, Helvetica Neue, Arial, sans-sarif;
+        background: linear-gradient(180deg, hsl(195, 98%, 62%), hsl(139, 100%, 55%));
+    }
+    button {
+        background-color: hsl(235, 100%, 50%);
+        padding: 10px;
+        border:none;
+        color:white;
+        font-size:20px;
+        border-radius:15px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    #strummingImages {
+        margin:20px;
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+        background-color:transparent;
+    }
+    #strummingImages img {
+        border-radius:4px;
+        border-width:2.5px;
+        border-color:black;
+        border-style:solid;
+    }
+    button:hover {
+        background-color:hsl(235, 100%, 42%);
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px;
+    }
+    p {
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        margin: 20px;
+    }
+    ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+    
+}
+li {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+    font-size:20px;
+    font-weight:bold;
+    padding-bottom:0px;
+}
+label {
+    font-size:30px;
+    font-weight:bold;
+}
+input {
+    width:20px;
+    height:20px;
+}
+#img, #img1, #img2 {
+    height:50px;
+    width:10px;
+}
+    </style>
+    <link rel="icon" href="GuitarIcon.png" type="image/x-icon">
+    <h1>Strumming Practice!</h1>
+    <form>
+        <label for="strum4">4 strums</label>
+        <input type="radio" id="strum4" name="strum"><br>
+        <label for="strum8">8 strums</label>
+        <input type="radio" id="strum8" name="strum"><br>
+        <label for="strum16">16 strums</label>
+        <input type="radio" id="strum16" name="strum"><br>
+    </form>
+    <button id="button">Get strumming pattern!</button>
+    <div id="strummingImages"></div>
+    <h2>Instructions</h2>
+    <p>Welcome!</p>
+    <p>To get started, select one of the boxes(4 strums, 8 strums, 16 strums) above. Then press on the "Get strumming pattern!" button. Below, it will generate a strumming pattern. The key is as follows:
+    <ul>
+        <li><img src="GuitarImages/Strum1.png" id="img"> represents a muted strum.</li>
+        <li><img src="GuitarImages/Strum2.png" id="img1"> represents whatever chord you want to play.</li>
+        <li><img src="GuitarImages/Strum3.png" id="img2"> is just an indent to make it easier to read in groups of 4. For these, you don't strum at all.</li>
+    </ul>
+    </p>
+    <footer><h6>These images were taken from <a href="https://nationalguitaracademy.com/guides/beginners/how-to-read-guitar-tabs/">here</a>.</h6></footer>
+    <script>
+        const strummingImages = document.getElementById("strummingImages");
+        const button = document.getElementById("button");
+        const strum4 = document.getElementById("strum4");
+        const strum8 = document.getElementById("strum8");
+        const strum16 = document.getElementById("strum16");
+    button.onclick = function() {
+        if (strum4.checked) {
+            strummingImages.innerHTML = "";
+            let strummingPattern = ``;
+                for(let i = 1; i <=4; i++){
+                    const result = Math.floor(Math.random() * 2) + 1;
+                    strummingPattern += (result === 1) ? `<img src="GuitarImages/Strum1.png">` : `<img src="GuitarImages/Strum2.png">`;
+            }
+            strummingPattern += `<img src="GuitarImages/Strum3.png">`;
+            strummingImages.innerHTML += strummingPattern;
+        } 
+        else if (strum8.checked) {
+            strummingImages.innerHTML = "";
+            let strummingPattern = ``;
+            for  (let x = 1; x <= 2; x++){
+                for(let i = 1; i <=4; i++){
+                    const result = Math.floor(Math.random() * 2) + 1;
+                    strummingPattern += (result === 1) ? `<img src="GuitarImages/Strum1.png">` : `<img src="GuitarImages/Strum2.png">`; 
+                }
+            strummingPattern += `<img src="GuitarImages/Strum3.png">`;
+            }
+        strummingImages.innerHTML += strummingPattern;
+        } 
+        else if (strum16.checked) {
+        strummingImages.innerHTML = "";
+        let strummingPattern = ``;
+        for  (let x = 1; x <= 4; x++){
+            for(let i = 1; i <=4; i++){
+                const result = Math.floor(Math.random() * 2) + 1;
+                strummingPattern += (result === 1) ? `<img src="GuitarImages/Strum1.png">` : `<img src="GuitarImages/Strum2.png">`; 
+            }
+        strummingPattern += `<img src="GuitarImages/Strum3.png">`;
+        }
+        strummingImages.innerHTML += strummingPattern;
+        } 
+        else {
+            alert("Please select a strumming pattern!");
+        }
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
