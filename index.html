@@ -97,9 +97,9 @@ input {
     <p>Welcome!</p>
     <p>To get started, select one of the boxes(4 strums, 8 strums, 16 strums) above. Then press on the "Get strumming pattern!" button. Below, it will generate a strumming pattern. The key is as follows:
     <ul>
-        <li><img src="GuitarImages/Strum1.png" id="img"> represents a muted strum.</li>
-        <li><img src="GuitarImages/Strum2.png" id="img1"> represents whatever chord you want to play.</li>
-        <li><img src="GuitarImages/Strum3.png" id="img2"> is just an indent to make it easier to read in groups of 4. For these, you don't strum at all.</li>
+        <li><img src="Strum1.png" id="img"> represents a muted strum.</li>
+        <li><img src="Strum2.png" id="img1"> represents whatever chord you want to play.</li>
+        <li><img src="Strum3.png" id="img2"> is just an indent to make it easier to read in groups of 4. For these, you don't strum at all.</li>
     </ul>
     </p>
     <footer><h6>These images were taken from <a href="https://nationalguitaracademy.com/guides/beginners/how-to-read-guitar-tabs/">here</a>.</h6></footer>
@@ -115,9 +115,9 @@ input {
             let strummingPattern = ``;
                 for(let i = 1; i <=4; i++){
                     const result = Math.floor(Math.random() * 2) + 1;
-                    strummingPattern += (result === 1) ? `<img src="GuitarImages/Strum1.png">` : `<img src="GuitarImages/Strum2.png">`;
+                    strummingPattern += (result === 1) ? `<img src="Strum1.png">` : `<img src="Strum2.png">`;
             }
-            strummingPattern += `<img src="GuitarImages/Strum3.png">`;
+            strummingPattern += `<img src="Strum3.png">`;
             strummingImages.innerHTML += strummingPattern;
         } 
         else if (strum8.checked) {
@@ -126,9 +126,9 @@ input {
             for  (let x = 1; x <= 2; x++){
                 for(let i = 1; i <=4; i++){
                     const result = Math.floor(Math.random() * 2) + 1;
-                    strummingPattern += (result === 1) ? `<img src="GuitarImages/Strum1.png">` : `<img src="GuitarImages/Strum2.png">`; 
+                    strummingPattern += (result === 1) ? `<img src="Strum1.png">` : `<img src="Strum2.png">`; 
                 }
-            strummingPattern += `<img src="GuitarImages/Strum3.png">`;
+            strummingPattern += `<img src="Strum3.png">`;
             }
         strummingImages.innerHTML += strummingPattern;
         } 
@@ -138,9 +138,9 @@ input {
         for  (let x = 1; x <= 4; x++){
             for(let i = 1; i <=4; i++){
                 const result = Math.floor(Math.random() * 2) + 1;
-                strummingPattern += (result === 1) ? `<img src="GuitarImages/Strum1.png">` : `<img src="GuitarImages/Strum2.png">`; 
+                strummingPattern += (result === 1) ? `<img src="Strum1.png">` : `<img src="Strum2.png">`; 
             }
-        strummingPattern += `<img src="GuitarImages/Strum3.png">`;
+        strummingPattern += `<img src="Strum3.png">`;
         }
         strummingImages.innerHTML += strummingPattern;
         } 
