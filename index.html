@@ -1,89 +1,17 @@
 <!DOCTYPE html>
 <head>
+<html lang="en">
     <title>Strumming For Guitar Practice</title>
-    <style>
-        body {
-        min-height: 100vh;
-        margin:0;
-        padding:0;
-        text-align:center;
-        font-family: Helvetica, Helvetica Neue, Arial, sans-sarif;
-        background: linear-gradient(180deg, hsl(195, 98%, 62%), hsl(139, 100%, 55%));
-    }
-    button {
-        background-color: hsl(235, 100%, 50%);
-        padding: 10px;
-        border:none;
-        color:white;
-        font-size:20px;
-        border-radius:15px;
-        cursor: pointer;
-        margin: 10px;
-    }
-    #strummingImages {
-        margin:20px;
-        display: flex;
-        flex-direction:row;
-        justify-content:center;
-        background-color:transparent;
-    }
-    #strummingImages img{
-        border-radius:4px;
-        border-width:2.5px;
-        border-color:black;
-        border-style:solid;
-    }
-    button:hover {
-        background-color:hsl(235, 100%, 42%);
-    }
-    footer {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: transparent;
-        color: rgb(0, 0, 0);
-        text-align: center;
-        padding: 10px;
-    }
-    p {
-        font-size: 20px;
-        color: black;
-        text-align: center;
-        margin: 20px;
-    }
-    ul {
-    list-style-position: inside;
-    padding-left: 0;
-    margin-left: 0;
-    
-}
-li {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 10px;
-    padding-left: 0;
-    font-size:20px;
-    font-weight:bold;
-    padding-bottom:0px;
-}
-label {
-    font-size:30px;
-    font-weight:bold;
-}
-input {
-    width:20px;
-    height:20px;
-}
-#img, #img1, #img2 {
-    height:50px;
-    width:10px;
-}
-    </style>
+    <link rel="stylesheet" href="guitar.css">
     <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
     </head>
-    <body> 
+    <body>
+        <nav>
+            <ul>
+                <a href="index.html">Guitar Strumming Practice</a>
+                <a href="guitar1.html">Guitar Scale Practice</a>
+            </ul>
+        </nav>
     <h1>Strumming Practice!</h1>
     <form>
         <label for="strum4">4 strums</label>
@@ -105,52 +33,6 @@ input {
     </ul>
     </p>
     <footer><h6>These images were taken from <a href="https://nationalguitaracademy.com/guides/beginners/how-to-read-guitar-tabs/">here</a>.</h6></footer>
-    <script>
-        const strummingImages = document.getElementById("strummingImages");
-        const button = document.getElementById("button");
-        const strum4 = document.getElementById("strum4");
-        const strum8 = document.getElementById("strum8");
-        const strum16 = document.getElementById("strum16");
-    button.onclick = function() {
-        if (strum4.checked) {
-            strummingImages.innerHTML = "";
-            let strummingPattern = ``;
-                for(let i = 1; i <=4; i++){
-                    const result = Math.floor(Math.random() * 2) + 1;
-                    strummingPattern += (result === 1) ? `<img src="Strum1.png">` : `<img src="Strum2.png">`;
-            }
-            strummingPattern += `<img src="Strum3.png" style="width: 4px;">`;
-            strummingImages.innerHTML += strummingPattern;
-        } 
-        else if (strum8.checked) {
-            strummingImages.innerHTML = "";
-            let strummingPattern = ``;
-            for  (let x = 1; x <= 2; x++){
-                for(let i = 1; i <=4; i++){
-                    const result = Math.floor(Math.random() * 2) + 1;
-                    strummingPattern += (result === 1) ? `<img src="Strum1.png">` : `<img src="Strum2.png">`; 
-                }
-            strummingPattern += `<img src="Strum3.png" style="width: 4px;">`;
-            }
-        strummingImages.innerHTML += strummingPattern;
-        } 
-        else if (strum16.checked) {
-        strummingImages.innerHTML = "";
-        let strummingPattern = ``;
-        for  (let x = 1; x <= 4; x++){
-            for(let i = 1; i <=4; i++){
-                const result = Math.floor(Math.random() * 2) + 1;
-                strummingPattern += (result === 1) ? `<img src="Strum1.png">` : `<img src="Strum2.png">`; 
-            }
-        strummingPattern += `<img src="Strum3.png" style="width: 4px;">`;
-        }
-        strummingImages.innerHTML += strummingPattern;
-        } 
-        else {
-            alert("Please select a strumming pattern!");
-        }
-}
-    </script>
- 
+    <script src="guitar.js"></script>
 </body>
 </html>
