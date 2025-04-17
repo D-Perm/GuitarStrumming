@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guitar Scale Practice!</title>
+    <link rel="stylesheet" href="guitar.css">
+    <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
+</head>
+<body>
+    <body>
+        <nav>
+            <ul>
+                <a href="index.html">Guitar Strumming Practice</a>
+                <a href="guitar1.html">Guitar Scale Practice</a>
+            </ul>
+        </nav>
+    <h1>Scale Practice!</h1>
+    <form>
+        <label for="scale">Select a scale:</label>
+        <select id="scale" name="scale">
+            <option value="C" id="C">C Major</option>
+            <option value="CD" id="CD">C Sharp/D Flat Major</option>
+            <option value="D" id="D">D Major</option>
+            <option value="DE" id="DE">D Sharp/E Flat Major</option>
+            <option value="E" id="E">E Major</option>
+            <option value="F" id="F">F Major</option>
+            <option value="FG" id="FG">F Sharp/G Flat Major</option>
+            <option value="G" id="G">G Major</option>
+            <option value="GA" id="GA">G Sharp/A Flat Major</option>
+            <option value="A" id="A">A Major</option>
+            <option value="AB" id="AB">A Sharp/B Flat Major</option>
+            <option value="B" id="B">B Major</option>
+        </select><br><br>
+        <label for="type">Select a type:</label>
+        <form>
+            <select id="type" name="type">
+                <option value="OneStringE" id="OneStringE">One string(E)</option>
+                <option value="OneStringA" id="OneStringA">One string(A)</option>
+                <option value="OneStringD" id="OneStringD">One string(D)</option>
+                <option value="OneStringG" id="OneStringG">One string(G)</option>
+                <option value="OneStringB" id="OneStringB">One string(B)</option>
+                <option value="AcrossWhole" id="Across">Across fretboard</option>
+            </select><br><br>
+        </form>
+        <div id="div"><h1 id="h1"></h1></div>
+        <button id="button">Get scale!</button>
+        <h2>Instructions</h2>
+        <h3>Welcome to the CAGED system scale practice tool! To use this tool, simply select the dropdown menus and select the scale you would like to practice. Then click the "get scale" button to get a scale. One string()" will generate the scale on the one string inside the parentheses and "across fretboard" will generate the entire CAGED system of the scale.</h3>
+        <h3>The key is as follows:</h3>
+        <ul>
+            <li><img src="CKey.png" id="CKey"><p>Notes with this color are part of the C scale in the CAGED system.</p></li>
+            <li><img src="AKey.png" id="AKey"><p>Notes with this color are part of the A scale in the CAGED system.</p></li>
+            <li><img src="GKey.png" id="GKey"><p>Notes with this color are part of the G scale in the CAGED system.</p></li>
+            <li><img src="EKey.png" id="EKey"><p>Notes with this color are part of the E scale in the CAGED system.</p></li>
+            <li><img src="DKey.png" id="DKey"><p>Notes with this color are part of the D scale in the CAGED system.</p></li>
+            <li><img src="2Key.png" id="2Key"><p>Notes with two colors like this are part of two scales.</p></li>
+            <li><img src="3Key.png" id="3Key"><p>Notes with three colors like this are part of three scales.</p></li>
+        </ul>
+    <script src="guitarScales.js"></script>
+</body>
+</html>
