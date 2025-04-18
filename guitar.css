@@ -77,9 +77,13 @@ height:50px;
 width:10px;
 }
 nav {
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
     display: flex;
     justify-content: center;
-    background-color:turquoise;
+    background-color: turquoise;
+    height: 60px;
 }
 nav a{
     text-decoration:none;
