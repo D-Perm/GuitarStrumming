@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
     <title>Guitar Scale Practice!</title>
+    <style>
+        div {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            gap: 0;
+        }
+        div img {
+            width:1200px;
+            height:auto;
+            margin:0;
+            display:block;
+        }
+    </style>
     <link rel="stylesheet" href="guitar.css">
     <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
 </head>
@@ -41,7 +55,7 @@
                 <option value="AcrossWhole" id="Across">Across fretboard</option>
             </select><br><br>
         </form>
-        <div id="div"><h1 id="h1"></h1></div>
+        <div id="div"></div>
         <button id="button">Get scale!</button>
         <h2>Instructions</h2>
         <h3>Welcome to the CAGED system scale practice tool! To use this tool, simply select the dropdown menus and select the scale you would like to practice. Then click the "get scale" button to get a scale. "One string()" will generate the scale on the one string inside the parentheses and "across fretboard" will generate the entire CAGED system of the scale.</h3>
