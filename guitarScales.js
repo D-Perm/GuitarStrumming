@@ -2,7 +2,56 @@ const button = document.getElementById("button");
 const scale = document.getElementById("scale");
 const type = document.getElementById("type");
 let div = document.getElementById("div");
+document.addEventListener(`keydown`, function(event) {
+    const keyPressed = event.key;
 
+    if (keyPressed === "ArrowRight") {
+        if (type.value === "OneStringE"){
+                type.value = "OneStringA";
+            }
+        else if (type.value === "OneStringA"){
+                type.value = "OneStringD";
+            }
+        else if (type.value === "OneStringD"){
+                type.value = "OneStringG";
+            }
+        else if (type.value === "OneStringG"){
+                type.value = "OneStringB";
+            }
+        else if (type.value === "OneStringB"){
+                type.value = "AcrossWhole";
+            }
+        else {
+                type.value = "OneStringE";
+            }
+    }
+    else if (keyPressed === "ArrowLeft") {
+        if (type.value === "OneStringE"){
+                type.value = "AcrossWhole";
+            }
+        else if (type.value === "OneStringA"){
+                type.value = "OneStringE";
+            }
+        else if (type.value === "OneStringD"){
+                type.value = "OneStringA";
+            }
+        else if (type.value === "OneStringG"){
+                type.value = "OneStringD";
+            }
+        else if (type.value === "OneStringB"){
+                type.value = "OneStringG";
+            }
+        else {
+                type.value = "OneStringB";
+            }
+    }
+    else if (keyPressed === "Enter") {
+        button.click();
+    }
+    else {
+    }
+}
+)
 button.onclick = function (){
     if(type.value === "OneStringE"){
         if (scale.value === "C"){
