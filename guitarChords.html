@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guitar Chords</title>
+        <link rel="stylesheet" href="guitarChords.css">
+        <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
+    </head>
+    <body>
+    <div id="block">  
+      <ul>
+        <div><img src="guitarToolsLogo.png"></div>
+        <div><a href="home.html">Home</a></div>
+        <div><a href="index.html">Guitar Strumming Practice</a></div>
+        <div><a href="guitar1.html">Guitar Scale Practice</a></div>
+        <div><a href="guitarChords.html">Guitar Chord Practice</a></div>
+      </ul>
+    </div>
+    <img src="guitarToolsLogo.png" height="100px" width="100px">
+    <button id="button"><i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i></button>
+    <br>
+    <h1>Guitar Chords Practice!</h1>
+    <form>
+      <label for="stringChords">Filter by string</label>
+      <select id="stringChords">
+        <option value="EString">E String Chords Only</option>
+        <option value="AString">A String Chords Only</option>
+        <option value="Both">Both</option>
+      </select>
+      <br>
+      <br>
+      <label for="lengthChords">Number of chords</label>
+      <select id="lengthChords">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+      </select>
+      <br>
+      <hr>
+      <div id="typeDiv">
+      <span id="typeSpan">
+        <label for="Major">Major</label>
+        <input type="checkbox" id="Major" class="inputType" value="Major">
+        <label for="Minor">Minor</label>
+        <input type="checkbox" id="Minor" class="inputType" value="Minor">
+        <label for="7th">7</label>
+        <input type="checkbox" id="7th" class="inputType" value="7th">
+        <label for="Major7">Major 7</label>
+        <input type="checkbox" id="Major7" class="inputType" value="Major7">
+        <label for="Minor7">Minor 7</label>
+        <input type="checkbox" id="Minor7" class="inputType" value="Minor7">
+        <label for="dim">Diminished</label>
+        <input type="checkbox" id="dim" class="inputType" value="dim">
+        </span>
+      </div>
+      <br>
+      <hr>
+      <div id="whichDiv">
+      <span id="whichSpan">
+        <label for="C">C</label>
+        <input id="C" type="checkbox" class="inputWhich" value="C">
+        <label for="CD">C#/D&#9837</label>
+        <input id="CD" type="checkbox" class="inputWhich" value="CD">
+        <label for="D">D</label>
+        <input id="D" type="checkbox" class="inputWhich" value="D">
+        <label for="DE">D#/E&#9837</label>
+        <input id="DE" type="checkbox" class="inputWhich" value="DE">
+        <label for="EE">E</label>
+        <input id="EE" type="checkbox" class="inputWhich" value="EE">
+        <label for="F">F</label>
+        <input id="F" type="checkbox" class="inputWhich" value="F">
+        <label for="FG">F#/G&#9837</label>
+        <input id=FG" type="checkbox" class="inputWhich" value="FG">
+        <label for="G">G</label>
+        <input id="G" type="checkbox" class="inputWhich" value="G">
+        <label for="GA">G#/A&#9837</label>
+        <input id="GA" type="checkbox" class="inputWhich" value="GA">
+        <label for="AA">A</label>
+        <input id="AA" type="checkbox" class="inputWhich" value="AA">
+        <label for="AB">A#/B&#9837</label>
+        <input id="AB" type="checkbox" class="inputWhich" value="AB">
+        <label for="B">B</label>
+        <input id="B" type="checkbox" class="inputWhich" value="B">
+      </span>
+      </div>
+    </form>
+    <button id="getChords">Get Chords</button>
+    <button id="showAnswers">Show me how to play the chords</button>
+    <div id="showChords"></div>
+    <div id="divChords"></div>
+<footer><p><strong><em>Big thanks to Mads Stoumann for the code that enabled me to create these amazing looking chords! Check him out <a href="https://codepen.io/stoumann/pen/qEEKJYq" target="_blank">here.</a></em></strong></p></footer>
+    <script src="https://kit.fontawesome.com/cdcd88ab68.js" crossorigin="anonymous"></script>
+    <script src="animatedHomeBar.js"></script>
+    <script src="guitarChords.js"></script>
+    <script src="chordInfo.js"></script>
+    <script src="chordMech.js"></script>
+    </body>
+</html>
