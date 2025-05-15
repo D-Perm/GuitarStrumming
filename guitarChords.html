@@ -103,7 +103,41 @@
     <div id="showChords"></div>
     <div id="divChords"></div>
 <footer><p><strong><em>Big thanks to Mads Stoumann for the code that enabled me to create these amazing looking chords! Check him out <a href="https://codepen.io/stoumann/pen/qEEKJYq" target="_blank">here.</a></em></strong></p></footer>
-    <script src="guitarChords.js"></script>
+    <script>
+        function isAdvancedAttrSupported() {
+  const T = document.createElement('div');
+  document.body.appendChild(T);
+  
+  try {
+    T.style.setProperty('--t', 'attr(data-test type(<number>), 0)');
+    T.dataset.test = "123";
+
+    const computedValue = getComputedStyle(T)
+      .getPropertyValue('--t')
+      .trim();
+    
+    return computedValue === "123";
+  } catch (e) {
+    return false;
+  } finally {
+    T.remove();
+  }
+}
+
+if (!isAdvancedAttrSupported()) {
+  const fretBoards = document.querySelectorAll('fret-board');
+  fretBoards.forEach(fret => {
+    fret.style.setProperty('--_strings', fret.getAttribute('strings'));
+    fret.style.setProperty('--_frets', fret.getAttribute('frets'));
+    const stringNotes = fret.querySelectorAll('string-note');
+    stringNotes.forEach(note => {
+      note.style.setProperty('--string', note.getAttribute('string') || 1);
+      note.style.setProperty('--fret', note.getAttribute('fret') || 0);
+      note.style.setProperty('--barre', note.getAttribute('barre') || 1);
+    });
+  });
+}
+    </script>
     <script src="https://kit.fontawesome.com/cdcd88ab68.js" crossorigin="anonymous"></script>
     <script src="animatedHomeBar.js"></script>
     <script src="chordInfo.js"></script>
