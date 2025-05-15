@@ -1,4 +1,4 @@
-fret-board {
+        fret-board {
 	--fret-board-bg: light-dark(#EEE, #333);
 	--fret-board-fret-c: light-dark(#000, #FFF);
 	--fret-board-fret-w: clamp(0.0625rem, 0.03125rem + 0.5cqi, 0.5rem);
@@ -22,7 +22,6 @@ fret-board {
 		repeat(calc(var(--_frets)), 1fr)
 		var(--fret-board-bottom-row-h, 15%);
 	place-items: center;
-	margin: 10px;
 
 	/* Grid Lines (frets and strings) */
 	&::before {
@@ -66,9 +65,9 @@ fret-board {
 		height: 100%;
 		list-style-position: inside;
 		padding: 0;
-		font-family:Helvetica, Helvetica Neue, Arial, sans-sarif;
 	}
 }
+
 string-note {
 	--string-note-h: 12cqi;
 	--string-note-open-mute-h: 5cqi;
@@ -129,16 +128,7 @@ body {
     font-family: Helvetica, Helvetica Neue, Arial, sans-sarif;
     background: linear-gradient(180deg, hsl(195, 98%, 62%), hsl(139, 100%, 55%));
 }
-div {
-	display: grid;
-	gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-}
-
-h2 {
-	font-weight: 500;
-}
-/*#divChords {
+#divChords {
 	display: grid;
 	gap: 1.5rem;
   	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
