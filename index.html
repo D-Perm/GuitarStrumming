@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #homePageImages {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .homePageItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .homePageItem label {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 70%;
+      text-align: center;
+    }
+
+    .homePageButtons {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .homePageButtons img {
+      border-radius: 20px;
+      width: 30vw;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .homePageButtons img:hover {
+      transform: translateY(-15px);
+    }
+  </style>
+    <link rel="stylesheet" href="guitar.css">
+    <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
+  <title>Guitar Tools Home</title>
+</head>
+<body>
+ <div id="block">  
+      <ul>
+        <div><img src="guitarToolsLogo.png"></div>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="guitar.html">Guitar Strumming Practice</a></div>
+        <div><a href="guitar1.html">Guitar Scale Practice</a></div>
+        <div><a href="guitarChords.html">Guitar Chord Practice</a></div>
+      </ul>
+    </div>
+    <img src="guitarToolsLogo.png" height="100px" width="100px">
+    <button id="button"><i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i></button>
+    <br>
+     <h1>Guitar Tools Home</h1>
+    <h3>Welcome to Guitar Tools!</h3>
+    <p>This website was created for one purpose and one purpose only... to help guitarists around the world improve their skills.</p>
+    <p>On this website, you will find the many tools that I have created(with help from other sources linked below the tools) to help me get better at guitar and I hope it will help you too!</p>
+    <p>Most of the tools have intructions below to explain to you what each tool does and how it works.</p>
+    <p>This is still a work in progress as I am in the process of developing new tools.</p>
+    <p>Hope this helps and have fun exploring and using this website!</p>
+  <h3>Some of my favorite tools!</h3>
+  <div id="homePageImages">
+    <div class="homePageItem">
+      <label>Guitar Tool's Strumming Tool</label>
+      <button class="homePageButtons">
+        <a href="guitar.html"><img src="guitarToolsStrumming.png" alt="Strumming Tool" /></a>
+      </button>
+    </div>
+    <div class="homePageItem">
+      <label>Guitar Tool's Scale Tool</label>
+      <button class="homePageButtons">
+        <a href="guitar1.html"><img src="guitarToolsScales.png" alt="Scale Tool" /></a>
+      </button>
+    </div>
+    <div class="homePageItem">
+      <label>Guitar Tool's Chord Tool</label>
+      <button class="homePageButtons">
+        <a href="guitarChords.html"><img src="guitarToolsChords.png" alt="Chord Tool" /></a>
+      </button>
+    </div>
+  </div>
+    <script src="https://kit.fontawesome.com/cdcd88ab68.js" crossorigin="anonymous"></script>
+    <script src="animatedHomeBar.js"></script>
+</body>
+</html>
