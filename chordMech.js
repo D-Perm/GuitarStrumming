@@ -61,22 +61,39 @@ showChords.innerHTML = finalChordDisplay.join(" → <br>");
 
 showAnswers.onclick = function(){
     divChords.innerHTML = visualChordDisplay.join("");
-    document.querySelectorAll('fret-board').forEach(fret => {
-  const frets = fret.getAttribute('frets') || 4;
-  const strings = fret.getAttribute('strings') || 6;
-  fret.style.setProperty('--_frets', frets);
-  fret.style.setProperty('--_strings', strings);
+    function isAdvancedAttrSupported() {
+  const T = document.createElement('div');
+  document.body.appendChild(T);
+  
+  try {
+    T.style.setProperty('--t', 'attr(data-test type(<number>), 0)');
+    T.dataset.test = "123";
 
-  fret.querySelectorAll('string-note').forEach(note => {
-    const string = note.getAttribute('string') || 1;
-    const fretNum = note.getAttribute('fret') || 0;
-    const barre = note.getAttribute('barre') || 1;
-    note.style.setProperty('--string', string);
-    note.style.setProperty('--fret', fretNum);
-    note.style.setProperty('--barre', barre);
+    const computedValue = getComputedStyle(T)
+      .getPropertyValue('--t')
+      .trim();
+    
+    return computedValue === "123";
+  } catch (e) {
+    return false;
+  } finally {
+    T.remove();
+  }
+}
+
+if (!isAdvancedAttrSupported()) {
+  const fretBoards = document.querySelectorAll('fret-board');
+  fretBoards.forEach(fret => {
+    fret.style.setProperty('--_strings', fret.getAttribute('strings'));
+    fret.style.setProperty('--_frets', fret.getAttribute('frets'));
+    const stringNotes = fret.querySelectorAll('string-note');
+    stringNotes.forEach(note => {
+      note.style.setProperty('--string', note.getAttribute('string') || 1);
+      note.style.setProperty('--fret', note.getAttribute('fret') || 0);
+      note.style.setProperty('--barre', note.getAttribute('barre') || 1);
+    });
   });
-});
-
+}
 }
 
 chordFilter = [];
