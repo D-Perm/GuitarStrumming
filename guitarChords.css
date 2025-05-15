@@ -129,8 +129,16 @@ body {
     font-family: Helvetica, Helvetica Neue, Arial, sans-sarif;
     background: linear-gradient(180deg, hsl(195, 98%, 62%), hsl(139, 100%, 55%));
 }
+div {
+	display: grid;
+	gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
 
-#divChords {
+h2 {
+	font-weight: 500;
+}
+/*#divChords {
 	display: grid;
 	gap: 1.5rem;
   	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -158,7 +166,7 @@ font-size:30px;
 font-weight:bold;
 }
 hr{
-	border-style:none;
+	border-style:groove;
 	width: 95vw;
 	max-width: 1000px;
 }
