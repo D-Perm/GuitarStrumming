@@ -6,7 +6,7 @@ body {
     font-family: Helvetica, Helvetica Neue, Arial, sans-sarif;
     background: linear-gradient(180deg, hsl(195, 98%, 62%), hsl(139, 100%, 55%));
 }
-button {
+#button2 {
     background-color: hsl(235, 100%, 50%);
     padding: 10px;
     border:none;
@@ -29,7 +29,7 @@ button {
     border-color:black;
     border-style:solid;
 }
-button:hover {
+#button2:hover {
     background-color:hsl(235, 100%, 42%);
 }
 footer {
@@ -71,33 +71,11 @@ font-weight:bold;
 input {
 width:20px;
 height:20px;
-}
-#img, #img1, #img2 {
-height:50px;
-width:10px;
-}
-nav {
-    position: sticky;
-    top: 0; 
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    background-color: turquoise;
-    height: 60px;
-}
-nav a{
-    text-decoration:none;
-    font-weight:bold;
-    color:black;
-    font-size:20px;
-    padding:10px;
-}
-nav a:hover{
-    color:rgb(91, 91, 91);
-}
-nav a:active{
-    color:hsl(183, 80%, 39%);
-}
+} 
+ul #img, #img1, #img2 {
+    height:50px;
+    width:10px;
+    }
 select {
     height:30px;
     text-align:center;
@@ -115,4 +93,50 @@ option {
 h3 {
     padding-left: 10px;
     padding-right:10px;
+}
+#block {
+  background-color: #40e0d0;
+  position: absolute;
+  height: 100vh;
+  width: 40vw;
+  left: -40vw;
+  z-index: 1000000;
+  padding: 0;
+}
+#block a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: clamp(16px, 2vw, 24px);
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+#block div{
+	transition: all 0.3s ease-in-out;
+}
+#block div:hover{
+	background-color: white;
+	opacity: 0.8;
+	transition: all 0.3s ease-in-out;
+}
+#block ul{
+	margin: 0;
+	padding:0;
+}
+#block img {
+  margin-top: 20px;
+  max-width: 70%;
+  height: auto;
+}
+#button{
+  position: absolute;
+  right: 0;
+  margin-top:5%;
+  margin-right: 5%;
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
 }
