@@ -158,7 +158,7 @@ font-size:30px;
 font-weight:bold;
 }
 hr{
-	border-style:groove;
+	border-style:none;
 	width: 95vw;
 	max-width: 1000px;
 }
