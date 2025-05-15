@@ -6,12 +6,18 @@
     <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
     </head>
     <body>
-        <nav>
-            <ul>
-                <a href="index.html">Guitar Strumming Practice</a>
-                <a href="guitar1.html">Guitar Scale Practice</a>
-            </ul>
-        </nav>
+    <div id="block">  
+      <ul>
+        <div><img src="guitarToolsLogo.png"></div>
+        <div><a href="home.html">Home</a></div>
+        <div><a href="index.html">Guitar Strumming Practice</a></div>
+        <div><a href="guitar1.html">Guitar Scale Practice</a></div>
+        <div><a href="guitarChords.html">Guitar Chord Practice</a></div>
+      </ul>
+    </div>
+    <img src="guitarToolsLogo.png" height="100px" width="100px">
+    <button id="button"><i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i></button>
+    <br>
     <h1>Strumming Practice!</h1>
     <form>
         <label for="strum4">4 strums</label>
@@ -21,7 +27,7 @@
         <label for="strum16">16 strums</label>
         <input type="radio" id="strum16" name="strum"><br>
     </form>
-    <button id="button">Get strumming pattern!</button>
+    <button id="button2">Get strumming pattern!</button>
     <div id="strummingImages"></div>
     <h2>Instructions</h2>
     <p>Welcome!</p>
@@ -32,7 +38,9 @@
         <li><img src="Strum3.png" id="img2"> is just an indent to make it easier to read in groups of 4. For these, you don't strum at all.</li>
     </ul>
     </p>
-    <footer><h6>These images were taken from <a href="https://nationalguitaracademy.com/guides/beginners/how-to-read-guitar-tabs/">here</a>.</h6></footer>
+    <footer><p><strong><em>These images were taken from <a href="https://nationalguitaracademy.com/guides/beginners/how-to-read-guitar-tabs/">here</a>.</em></strong></p></footer>
+    <script src="https://kit.fontawesome.com/cdcd88ab68.js" crossorigin="anonymous"></script>
+    <script src="animatedHomeBar.js"></script>
     <script src="guitar.js"></script>
 </body>
 </html>
