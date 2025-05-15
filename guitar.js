@@ -1,9 +1,9 @@
 const strummingImages = document.getElementById("strummingImages");
-const button = document.getElementById("button");
+const button2 = document.getElementById("button2");
 const strum4 = document.getElementById("strum4");
 const strum8 = document.getElementById("strum8");
 const strum16 = document.getElementById("strum16");
-button.onclick = function() {
+button2.onclick = function() {
 if (strum4.checked) {
     strummingImages.innerHTML = "";
     let strummingPattern = ``;
