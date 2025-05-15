@@ -1,7 +1,7 @@
-const button = document.getElementById("button");
+const button2 = document.getElementById("button2");
 const scale = document.getElementById("scale");
 const type = document.getElementById("type");
-let div = document.getElementById("div");
+let div = document.getElementById("divScalesScale");
 document.addEventListener(`keydown`, function(event) {
     const keyPressed = event.key;
 
@@ -52,7 +52,7 @@ document.addEventListener(`keydown`, function(event) {
     }
 }
 )
-button.onclick = function (){
+button2.onclick = function (){
     if(type.value === "OneStringE"){
         if (scale.value === "C"){
             div.innerHTML = `<img src="CScale-E.png">`;
