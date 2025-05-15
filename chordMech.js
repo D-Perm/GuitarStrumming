@@ -14,7 +14,7 @@ let visualChordDisplay = [];
 let pickChords;
 
 const getChords = document.querySelector("#getChords");
-const showAnswers = document.querySelector("#showAnswers")
+const showAnswers = document.querySelector("#showAnswers");
 getChords.onclick = function (){
 
 visualChordDisplay = [];
@@ -61,6 +61,22 @@ showChords.innerHTML = finalChordDisplay.join(" → <br>");
 
 showAnswers.onclick = function(){
     divChords.innerHTML = visualChordDisplay.join("");
+    document.querySelectorAll('fret-board').forEach(fret => {
+  const frets = fret.getAttribute('frets') || 4;
+  const strings = fret.getAttribute('strings') || 6;
+  fret.style.setProperty('--_frets', frets);
+  fret.style.setProperty('--_strings', strings);
+
+  fret.querySelectorAll('string-note').forEach(note => {
+    const string = note.getAttribute('string') || 1;
+    const fretNum = note.getAttribute('fret') || 0;
+    const barre = note.getAttribute('barre') || 1;
+    note.style.setProperty('--string', string);
+    note.style.setProperty('--fret', fretNum);
+    note.style.setProperty('--barre', barre);
+  });
+});
+
 }
 
 chordFilter = [];
