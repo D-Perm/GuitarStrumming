@@ -3,13 +3,13 @@
 <head>
     <title>Guitar Scale Practice!</title>
     <style>
-        div {
+        #divScalesScale {
             display: flex;
             flex-direction:column;
             align-items: center;
             gap: 0;
         }
-        div img {
+        #divScalesScale img {
             width:95vw;
             height:auto;
             margin:0;
@@ -20,13 +20,18 @@
     <link rel="icon" href="GuitarIcon.ico" type="image/x-icon">
 </head>
 <body>
-    <body>
-        <nav>
-            <ul>
-                <a href="index.html">Guitar Strumming Practice</a>
-                <a href="guitar1.html">Guitar Scale Practice</a>
-            </ul>
-        </nav>
+    <div id="block">  
+      <ul>
+        <div><img src="guitarToolsLogo.png"></div>
+        <div><a href="home.html">Home</a></div>
+        <div><a href="index.html">Guitar Strumming Practice</a></div>
+        <div><a href="guitar1.html">Guitar Scale Practice</a></div>
+        <div><a href="guitarChords.html">Guitar Chord Practice</a></div>
+      </ul>
+    </div>
+    <img src="guitarToolsLogo.png" height="100px" width="100px">
+    <button id="button"><i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i></button>
+    <br>
     <h1>Scale Practice!</h1>
     <form>
         <label for="scale">Select a scale:</label>
@@ -55,8 +60,8 @@
                 <option value="AcrossWhole" id="Across">Across fretboard</option>
             </select><br><br>
         </form>
-        <div id="div"></div>
-        <button id="button">Get scale!</button>
+        <div id="divScalesScale"></div>
+        <button id="button2">Get scale!</button>
         <h2>Instructions</h2>
         <h3>Welcome to the CAGED system scale practice tool! To use this tool, simply select the dropdown menus and select the scale you would like to practice. Then click the "get scale" button to get a scale. "One string()" will generate the scale on the one string inside the parentheses and "across fretboard" will generate the entire CAGED system of the scale.</h3>
         <h3>The key is as follows:</h3>
@@ -69,6 +74,8 @@
             <li><img src="2Key.png" id="2Key"><p>Notes with two colors like this are part of two scales.</p></li>
             <li><img src="3Key.png" id="3Key"><p>Notes with three colors like this are part of three scales.</p></li>
         </ul>
+    <script src="https://kit.fontawesome.com/cdcd88ab68.js" crossorigin="anonymous"></script>
+    <script src="animatedHomeBar.js"></script>
     <script src="guitarScales.js"></script>
 </body>
 </html>
